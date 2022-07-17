@@ -1,0 +1,19 @@
+.todo {
+    background-color: rgb(226, 245, 255);
+    padding: 10px;
+    &-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    &-item {
+        cursor: pointer;
+        padding: 10px 0;
+        transition: 0.3s;
+        &.completed {
+            padding: 10px 20px;
+            color: rgb(201, 201, 201);
+            text-decoration: line-through;
+        }
+    }
+}
