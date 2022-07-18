@@ -1,0 +1,52 @@
+@mixin size($width: 100px, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+.todo {
+    background-color: rgb(191, 233, 255);
+    padding: 10px;
+    &-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    &-item {
+        cursor: pointer;
+        padding: 10px 0;
+        transition: 0.3s;
+        &.completed {
+            padding: 10px 20px;
+            color: rgb(201, 201, 201);
+            text-decoration: line-through;
+        }
+    }
+    &-new {
+        background-color: rgb(255, 178, 137);
+        padding: 10px;
+        margin-top: 15px;
+        &-item {
+            padding: 10px 0;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(236, 236, 236, 0.3);
+            }
+        }
+    }
+}
+
+.color {
+    background-color: rgb(255, 255, 203);
+    // margin: 15px -15px -15px -15px;
+    margin-top: 15px;
+    padding: 15px;
+    &-box {
+        @include size(120px);
+        display: grid;
+        place-content: center;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        color: #333;
+        font-weight: 600;
+    }
+}
