@@ -56,3 +56,18 @@
     padding: 10px;
     margin-top: 15px;
 }
+
+.hobby {
+    background-color: rgba(150, 60, 214, 0.5);
+    // margin: 15px -15px -15px -15px;
+    margin-top: 15px;
+    padding: 10px;
+    &-item {
+        cursor: pointer;
+    }
+    &-active {
+        font-weight: bold;
+        color: rgb(255, 198, 85);
+        transition: 0.15s;
+    }
+}
